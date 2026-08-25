@@ -1,0 +1,594 @@
+{
+  "meta": {
+    "title": "The Road to Winnipeg",
+    "subtitle": "Xenia to the rendezvous — everything before the caravan starts",
+    "start": "2026-08-13",
+    "end": "2026-09-12",
+    "miles": 2347.9,
+    "nights": 30,
+    "drive_minutes": 2167,
+    "stops": 13,
+    "rig": "2022 Airstream Globetrotter 23FB Twin"
+  },
+  "origin": {
+    "name": "Xenia, Ohio",
+    "place": "463 Hyde Park Pl",
+    "lat": 39.67767,
+    "lon": -84.02572,
+    "depart": "2026-08-13",
+    "label_dir": "bottom"
+  },
+  "stops": [
+    {
+      "n": 1,
+      "name": "Sauder Village Campground",
+      "town": "Archbold, Ohio",
+      "kicker": "Shakedown",
+      "arrive": "2026-08-13",
+      "depart": "2026-08-16",
+      "nights": 3,
+      "miles": 200.6,
+      "cum": 200.6,
+      "drive": "3h 05m",
+      "lat": 41.54048,
+      "lon": -84.30134,
+      "address": "22611 State Route 2, Archbold, OH 43502",
+      "phone": "419-446-2541",
+      "url": "https://saudervillage.org/stay/sauder-village-campground/camper-rv-sites",
+      "features": [
+        "Pull-thru",
+        "Full hookups",
+        "Big rig access",
+        "Dump station",
+        "Pets",
+        "Tent sites"
+      ],
+      "notes": [
+        {
+          "h": "The shakedown leg",
+          "p": "Two hundred miles and three nights is the right first stop — far enough to shake something loose, close enough to fix it. Anything that rattles between Xenia and Archbold gets dealt with here, not in Manitoba."
+        },
+        {
+          "h": "Hookups",
+          "p": "Full hookups on a pull-thru, so this is the one place early on to top the fresh tank, run the Truma hard, and confirm the EasyStart brings the A/C up on shore power without tripping."
+        },
+        {
+          "h": "Worth the walk",
+          "p": "Sauder Village itself is next door — a working 19th-century living-history village, glass blowers and a working farm. Three nights makes it worth a day inside the gate."
+        }
+      ],
+      "short": "Archbold",
+      "label_dir": "right"
+    },
+    {
+      "n": 2,
+      "name": "Camp Grayling Trailer Park",
+      "town": "Grayling, Michigan",
+      "kicker": "Overnight",
+      "arrive": "2026-08-16",
+      "depart": "2026-08-17",
+      "nights": 1,
+      "miles": 231.5,
+      "cum": 432.2,
+      "drive": "3h 34m",
+      "lat": 44.63467,
+      "lon": -84.77206,
+      "address": "311 Howe Rd, Grayling, MI 49738",
+      "phone": "989-348-9033",
+      "url": "https://www.minationalguard.com/camp-grayling/camp-grayling-mwr/",
+      "features": [
+        "20/30-amp",
+        "Water & sewer",
+        "Cable & WiFi",
+        "Dump station",
+        "Big rig sites",
+        "Pets"
+      ],
+      "notes": [
+        {
+          "h": "It is a military installation",
+          "p": "Camp Grayling is the Michigan National Guard's post and the trailer park sits inside the gate. Eligibility runs to active duty, Guard, Reserve, retired, DAV, Purple Heart, former POW, veteran caregivers and DoD civilians — have the credential in hand at the gate, not buried in a drawer."
+        },
+        {
+          "h": "Sites",
+          "p": "About 70 wooded sites: 60 standard campers on 20/30-amp with water, sewer and cable, and only five true big-rig sites with 50-amp. At 23 feet the Globetrotter fits the standard sites without argument. Season runs the first Saturday in May through September 30, so mid-August is comfortably inside it."
+        },
+        {
+          "h": "One night, in and out",
+          "p": "Straight shot up I-75. Arrive, plug in, sleep, roll. Refill water here — the next two nights are thinner."
+        }
+      ],
+      "short": "Grayling",
+      "label_dir": "right"
+    },
+    {
+      "n": 3,
+      "name": "Au Train Lake Campground",
+      "town": "Au Train, Michigan",
+      "kicker": "No hookups",
+      "arrive": "2026-08-17",
+      "depart": "2026-08-18",
+      "nights": 1,
+      "miles": 228.8,
+      "cum": 660.9,
+      "drive": "3h 31m",
+      "lat": 46.3917,
+      "lon": -86.8383,
+      "address": "County Highway 596, Au Train, MI 49806",
+      "phone": "906-387-2512",
+      "url": "https://www.recreation.gov/camping/autrain-lake-campground/r/campgroundDetails.do?contractCode=NRSO&parkId=72064",
+      "features": [
+        "No hookups",
+        "Potable water",
+        "Vault toilets",
+        "Big rig access",
+        "Pets",
+        "Tent sites"
+      ],
+      "notes": [
+        {
+          "h": "First battery night",
+          "p": "Hiawatha National Forest — no electric, no sewer. This is the first night the 200 Ah of Battle Born and the MultiPlus carry the trailer alone. Easy for one night; a useful read on where the Cerbo sits at breakfast before the harder stretch in North Dakota."
+        },
+        {
+          "h": "Crossing the Mackinac",
+          "p": "The route runs I-75 over the Mackinac Bridge into the U.P. Steel grate deck in the inside lanes, crosswinds off the straits — outside lane, hands loose, no sudden corrections with a trailer behind."
+        },
+        {
+          "h": "The lake",
+          "p": "Au Train Lake is quiet water in the middle of a national forest, twenty minutes off M-28. Loons at dusk if the weather cooperates."
+        }
+      ],
+      "short": "Au Train",
+      "label_dir": "right"
+    },
+    {
+      "n": 4,
+      "name": "Wild State Cider",
+      "town": "Duluth, Minnesota",
+      "kicker": "Host stop",
+      "arrive": "2026-08-18",
+      "depart": "2026-08-19",
+      "nights": 1,
+      "miles": 289.1,
+      "cum": 950.1,
+      "drive": "4h 27m",
+      "lat": 46.76286,
+      "lon": -92.1302,
+      "address": "2515 Superior St, Duluth, MN 55806",
+      "url": "https://wildstatecider.com/",
+      "features": [
+        "Lot overnight",
+        "No hookups",
+        "One night only"
+      ],
+      "notes": [
+        {
+          "h": "A parking lot, not a campground",
+          "p": "Host-style overnight in the cidery lot — no hookups, no water, no dump. Self-contained on batteries again, second night in a row. Arrive inside business hours, leave in the morning, and buy something; that is the whole arrangement and the reason it keeps working for the next rig."
+        },
+        {
+          "h": "Level and lit",
+          "p": "Urban lots are rarely flat. Chock and level before unhitching anything, and pick a corner away from the delivery door and the dumpster run."
+        },
+        {
+          "h": "The long day",
+          "p": "289 miles across the U.P. and down through Wisconsin, the longest leg so far at four and a half hours. Duluth arrives late in the afternoon; the descent into town on I-35 with Lake Superior opening up ahead is worth having a camera reachable."
+        }
+      ],
+      "short": "Duluth",
+      "label_dir": "right"
+    },
+    {
+      "n": 5,
+      "name": "Minnesota Airstream Park",
+      "town": "Clear Lake, Minnesota",
+      "kicker": "Club park",
+      "arrive": "2026-08-19",
+      "depart": "2026-08-21",
+      "nights": 2,
+      "miles": 146.5,
+      "cum": 1096.6,
+      "drive": "2h 15m",
+      "lat": 45.45092,
+      "lon": -93.9785,
+      "address": "8795 82nd St SE Unit 1, Clear Lake, MN 55319",
+      "phone": "320-743-2771",
+      "url": "https://www.airstreampark.com/",
+      "features": [
+        "Full hookups",
+        "Big rig access",
+        "Dump station",
+        "Kid friendly"
+      ],
+      "notes": [
+        {
+          "h": "Recovery stop",
+          "p": "Shortest leg yet at 146 miles, and the first full hookups since Grayling after two nights on batteries. Dump, flush, fill, charge, laundry. Everything the next stretch will not offer."
+        },
+        {
+          "h": "An Airstream club park",
+          "p": "Member-run park on the Mississippi, one of the oldest Airstream club parks in the country. Expect to be recognised by the rig and to lose an hour to a conversation about the caravan."
+        },
+        {
+          "h": "Last easy resupply",
+          "p": "St. Cloud is twenty minutes west — the last full-size grocery, hardware, and RV parts within easy reach before North Dakota."
+        }
+      ],
+      "short": "Clear Lake",
+      "label_dir": "left"
+    },
+    {
+      "n": 6,
+      "name": "Jamestown Campground",
+      "town": "Jamestown, North Dakota",
+      "kicker": "Overnight",
+      "arrive": "2026-08-21",
+      "depart": "2026-08-22",
+      "nights": 1,
+      "miles": 282.5,
+      "cum": 1379.0,
+      "drive": "4h 21m",
+      "lat": 46.89123,
+      "lon": -98.77689,
+      "address": "3605 80th Ave SE, Jamestown, ND 58401",
+      "phone": "701-252-6262",
+      "url": "https://jamestowncampground.com",
+      "features": [
+        "Pull-thru",
+        "Full hookups",
+        "Big rig access",
+        "Dump station",
+        "Group camping",
+        "Cabins"
+      ],
+      "notes": [
+        {
+          "h": "Positioning night",
+          "p": "One night, full hookups, pull-thru. The job here is to arrive at Minot on Saturday clean, full, and empty — fresh tank topped, both grey and black dumped, batteries at 100%. Do all of it before pulling out."
+        },
+        {
+          "h": "Prairie wind",
+          "p": "I-94 west of Fargo is open country with nothing to break a crosswind. Watch the flags, not the forecast, and plan the fuel stops on the leeward side of the pumps."
+        },
+        {
+          "h": "The buffalo",
+          "p": "Jamestown keeps a 26-foot concrete bison on a hill above the interstate and a live herd, including white ones, below it. Five minutes off the highway."
+        }
+      ],
+      "short": "Jamestown",
+      "label_dir": "right"
+    },
+    {
+      "n": 7,
+      "name": "North Dakota State Fairgrounds",
+      "town": "Minot, North Dakota",
+      "kicker": "The Rally",
+      "arrive": "2026-08-22",
+      "depart": "2026-08-28",
+      "nights": 6,
+      "miles": 173.9,
+      "cum": 1552.9,
+      "drive": "2h 41m",
+      "lat": 48.22936,
+      "lon": -101.25601,
+      "address": "2005 Burdick Expy E, Minot, ND 58701",
+      "phone": "701-857-7620",
+      "url": "http://www.ndstatefair.com/lodging/",
+      "features": [
+        "Fairground power",
+        "Big rig access",
+        "Dump station",
+        "Pets",
+        "Tent sites"
+      ],
+      "highlight": true,
+      "notes": [
+        {
+          "h": "The 69th Airstream Club International Rally",
+          "p": "August 22–27. BRN 5224, two adults, one site, parked with the Grapes &amp; Grains club group, registered under Region 3 / Ohio Valley. Six nights — the longest stop before Metigoshe and the anchor the whole first half of this route was built around."
+        },
+        {
+          "h": "Fairground power is fairground power",
+          "p": "A thousand rigs on temporary distribution is exactly the situation the Progressive Industries surge protector exists for. Do not bypass it, and watch the Cerbo for voltage sag in the evening when every A/C on the grounds comes up at once."
+        },
+        {
+          "h": "Black tank cleanout",
+          "p": "The plan is an on-site cleaning service — an actual tank cleanout, not a honey wagon pump-out. Book it early in the week; the services on rally grounds fill up by Wednesday."
+        },
+        {
+          "h": "Departure day",
+          "p": "Rally ends the 27th, departure is the 28th. Leaving a day after the crowd is deliberate — the dump station queue on a rally departure morning is measured in hours."
+        }
+      ],
+      "short": "Minot",
+      "label_dir": "right"
+    },
+    {
+      "n": 8,
+      "name": "Juniper Campground",
+      "town": "Theodore Roosevelt NP — North Unit",
+      "kicker": "No hookups",
+      "arrive": "2026-08-28",
+      "depart": "2026-08-30",
+      "nights": 2,
+      "miles": 145.4,
+      "cum": 1698.3,
+      "drive": "2h 14m",
+      "lat": 47.59524,
+      "lon": -103.33324,
+      "address": "US Hwy 85, Theodore Roosevelt National Park, ND 58645",
+      "phone": "701-842-2333",
+      "url": "https://www.nps.gov/thro/planyourvisit/juniper-campground.htm",
+      "features": [
+        "No hookups",
+        "Water fill & dump",
+        "Drinking water",
+        "Generators 8a–8p",
+        "Pull-thru",
+        "Dump station"
+      ],
+      "notes": [
+        {
+          "h": "No hookups — but water and a dump station",
+          "p": "Juniper has drinking water, and a water fill and dump station that runs May through October 1. That makes it the last full service point before four nights across the two park units. Arrive with tanks empty and leave with them full."
+        },
+        {
+          "h": "Watch the trees",
+          "p": "The Park Service warns that rigs over 13 feet of height risk damage from the cottonwoods over the loop. At roughly 9'9\" with the Starlink mount the Globetrotter is well clear, but the branch that catches an awning arm does not care about the average."
+        },
+        {
+          "h": "Generators 8 to 8",
+          "p": "Generator hours are 8 a.m. to 8 p.m. with an effective muffler. Two nights on batteries with a mid-day Onan run inside the window is comfortable; running the Truma on LP rather than shore power is the whole point of the tankless."
+        },
+        {
+          "h": "Entrance fee",
+          "p": "$30 per vehicle for seven days, and the interagency pass is honoured — one pass covers both the North Unit here and the South Unit at Cottonwood two days later. Fourteen-night maximum stay, not a factor at two."
+        },
+        {
+          "h": "The North Unit",
+          "p": "Quieter than Medora by an order of magnitude. Bison on the road, the Little Missouri below the campground, and a scenic drive out to Oxbow Overlook that runs the length of the unit."
+        }
+      ],
+      "short": "TR North",
+      "label_dir": "left"
+    },
+    {
+      "n": 9,
+      "name": "Cottonwood Campground",
+      "town": "Theodore Roosevelt NP — South Unit, Medora",
+      "kicker": "No hookups",
+      "arrive": "2026-08-30",
+      "depart": "2026-09-01",
+      "nights": 2,
+      "miles": 78.7,
+      "cum": 1777.0,
+      "drive": "1h 13m",
+      "lat": 46.94846,
+      "lon": -103.52811,
+      "address": "E River Rd, Theodore Roosevelt National Park, Medora, ND 58645",
+      "phone": "701-623-4466",
+      "url": "https://www.nps.gov/thro/planyourvisit/cottonwood-campground.htm",
+      "features": [
+        "No hookups",
+        "No dump station",
+        "Seasonal water",
+        "Generators 8a–8p",
+        "Pull-thru",
+        "Big rig access"
+      ],
+      "notes": [
+        {
+          "h": "No hookups and no dump station",
+          "p": "This is the thin one. Cottonwood has seasonal potable water and nothing else — no electric, no sewer, and no dump on site. Dump and fill at Juniper before leaving the North Unit; Medora is five minutes away if something has to be dealt with mid-stay."
+        },
+        {
+          "h": "Four nights off-grid, ending here",
+          "p": "By departure on September 1 the trailer will have been four consecutive nights without shore power. Two Onan runs inside the 8 a.m.–8 p.m. window will cover it easily; the Orion keeps the batteries fed on the 79-mile hop down here regardless."
+        },
+        {
+          "h": "Cell service is unreliable",
+          "p": "Coverage in the South Unit ranges from moderate to none depending on carrier. Starlink has clear sky over the river bottom, which makes it the primary rather than the backup for these two days."
+        },
+        {
+          "h": "Shortest leg of the trip",
+          "p": "79 miles, an hour and change — the shortest drive between any two stops on the whole run. A morning move, with the afternoon free for the Scenic Loop Drive and the prairie dog towns."
+        }
+      ],
+      "short": "TR South",
+      "label_dir": "left"
+    },
+    {
+      "n": 10,
+      "name": "Lake Sakakawea State Park",
+      "town": "Pick City, North Dakota",
+      "kicker": "Back on power",
+      "arrive": "2026-09-01",
+      "depart": "2026-09-03",
+      "nights": 2,
+      "miles": 159.6,
+      "cum": 1936.6,
+      "drive": "2h 27m",
+      "lat": 47.51959,
+      "lon": -101.45399,
+      "address": "781 42 1/2 Ave NW, Pick City, ND 58545",
+      "phone": "701-487-3315",
+      "url": "https://www.parkrec.nd.gov/parks/lssp/lssp.html",
+      "features": [
+        "Electric",
+        "Pull-thru",
+        "Big rig access",
+        "Dump station",
+        "Pets",
+        "Tent sites"
+      ],
+      "notes": [
+        {
+          "h": "First shore power in five days",
+          "p": "Electric sites and a dump station. Full reset: dump both tanks, fill fresh, charge to 100%, run the water heater on shore power, laundry if the park has it."
+        },
+        {
+          "h": "The lake",
+          "p": "Sakakawea is the third-largest reservoir in the United States by area, held back by Garrison Dam right next to the park. The dam tour and the national fish hatchery below it are both worth an afternoon."
+        },
+        {
+          "h": "September light",
+          "p": "The first two nights of September on the northern plains — lows starting to drop into the forties. Not a furnace night yet, but the first stop where the heat might come on before dawn."
+        }
+      ],
+      "short": "Pick City",
+      "label_dir": "bottom"
+    },
+    {
+      "n": 11,
+      "name": "Lake Metigoshe State Park",
+      "town": "Bottineau, North Dakota",
+      "kicker": "The long stay",
+      "arrive": "2026-09-03",
+      "depart": "2026-09-10",
+      "nights": 7,
+      "miles": 164.4,
+      "cum": 2101.0,
+      "drive": "2h 32m",
+      "lat": 48.98318,
+      "lon": -100.33425,
+      "address": "E Shore Park Rd, Bottineau, ND 58318",
+      "phone": "701-263-4651",
+      "url": "https://www.parkrec.nd.gov/parks/lmsp/lmsp.html",
+      "features": [
+        "Electric",
+        "Pull-thru",
+        "Big rig access",
+        "Dump station",
+        "Cabins",
+        "Pets"
+      ],
+      "highlight": true,
+      "notes": [
+        {
+          "h": "Seven nights — the longest stop before the caravan",
+          "p": "A full week in the Turtle Mountains with electric and a dump station. This is the staging week: the last unhurried stretch to deal with anything the first 2,100 miles turned up before crossing into a month of scheduled days."
+        },
+        {
+          "h": "Two miles from Canada",
+          "p": "The park sits on the international boundary. The International Peace Garden is a half-hour east on Highway 281 — a garden that straddles the border, which is a strange and worthwhile thing to walk through the week before crossing it for real."
+        },
+        {
+          "h": "Pre-border week",
+          "p": "Use the time. Confirm the passports and the dog's rabies certificate, sort the propane, get the trailer's paperwork where it can be reached from the driver's seat, and eat down the fresh produce and the meat in the freezer — all of it becomes a border question in nine days."
+        },
+        {
+          "h": "Aurora, maybe",
+          "p": "48°59' north, dark sky over the lake, and early September is inside the equinox window when geomagnetic activity picks up. Not Churchill — but the first realistic shot at the lights on this trip."
+        }
+      ],
+      "short": "Bottineau",
+      "label_dir": "top"
+    },
+    {
+      "n": 12,
+      "name": "Icelandic State Park",
+      "town": "Cavalier, North Dakota",
+      "kicker": "Last U.S. stop",
+      "arrive": "2026-09-10",
+      "depart": "2026-09-12",
+      "nights": 2,
+      "miles": 138.1,
+      "cum": 2239.1,
+      "drive": "2h 07m",
+      "lat": 48.77263,
+      "lon": -97.73952,
+      "address": "13571 Highway 5, Cavalier, ND 58220",
+      "phone": "701-265-4561",
+      "url": "https://www.parkrec.nd.gov/parks/isp/isp.html",
+      "features": [
+        "Electric",
+        "Pull-thru",
+        "Big rig access",
+        "Dump station",
+        "Cabins",
+        "Group camping"
+      ],
+      "border": true,
+      "notes": [
+        {
+          "h": "The last American night",
+          "p": "Two nights, electric, dump station. Everything that is easier to do in U.S. dollars happens here: fuel, groceries, propane, prescriptions, and anything Amazon still owes you."
+        },
+        {
+          "h": "Empty the tanks and the fridge",
+          "p": "Dump both tanks before pulling out — the border is not the place to discover the black tank is full. Eat or discard fresh fruit and vegetables, and know exactly what meat is in the freezer; all food, plant and animal products must be declared, and an undeclared one runs up to a $1,300 penalty."
+        },
+        {
+          "h": "No firewood across the line",
+          "p": "Firewood does not cross. Burn it at Metigoshe or leave it in the ring here."
+        },
+        {
+          "h": "The alcohol limit is small",
+          "p": "Per adult, duty-free: 1.5 L of wine, or 1.14 L of spirits, or 8.5 L of beer. Two adults doubles it. Over the limit is legal — declare it and pay duty — but undeclared is not."
+        },
+        {
+          "h": "Have ready at the booth",
+          "p": "Passports, the dog's rabies certificate, trailer registration and insurance, and a straight answer on where you are going and for how long. Firearms and pepper spray are a separate and much stricter conversation — leave both at home."
+        },
+        {
+          "h": "Pioneer Heritage Center",
+          "p": "The park holds the Gunlogson homestead and a nature preserve on the Tongue River — old-growth floodplain forest, unusual for this part of the state."
+        }
+      ],
+      "short": "Cavalier",
+      "label_dir": "right"
+    },
+    {
+      "n": 13,
+      "name": "Town &amp; Country Campground",
+      "town": "Springfield, Manitoba — east Winnipeg",
+      "kicker": "Rendezvous",
+      "arrive": "2026-09-12",
+      "depart": "2026-09-15",
+      "nights": 3,
+      "miles": 108.8,
+      "cum": 2347.9,
+      "drive": "1h 40m",
+      "lat": 49.82708,
+      "lon": -96.97868,
+      "address": "56001 Murdock Rd, Springfield, MB R5T 0H3, Canada",
+      "phone": "204-256-2186",
+      "url": "https://www.townandcountrycamping.com/",
+      "features": [
+        "Full hookups",
+        "Pull-thru",
+        "Big rig access",
+        "Dump station",
+        "Group camping",
+        "Pets"
+      ],
+      "arrival": true,
+      "highlight": true,
+      "notes": [
+        {
+          "h": "The crossing",
+          "p": "ND-5 east to ND-18, north on I-29, and into Canada at Pembina–Emerson. It is open 24 hours a day, seven days a week, four auto lanes, the busiest crossing in North Dakota and one of only three that never closes. On the Canadian side it becomes Highway 75, the Lord Selkirk, and runs 58 miles straight north to the Winnipeg Perimeter."
+        },
+        {
+          "h": "Then the Perimeter",
+          "p": "Perimeter Highway 100 east, briefly onto Fermor, back onto 100/101 toward Brandon, then right on Murdock Road. 108 miles and 1h40 of driving — plus whatever the border takes."
+        },
+        {
+          "h": "Arriving a day early, on purpose",
+          "p": "The caravan rendezvous is Sunday the 13th, site 165. Rolling in Saturday means the trailer is level, hooked up, and settled before the first handshake — and if the border eats three hours it costs nothing."
+        },
+        {
+          "h": "Do not fly the drone here",
+          "p": "Town &amp; Country is 56001 Murdock Rd. Lyncrest Airport, CJL5, is 57119 Murdock Rd — 2.9 km up the same road, two grass runways, with Springfield Flying Club circuit traffic overhead. The DJI Mini 4K being under 250 g exempts it from registration and the distance rules; it does not exempt it from the hazard rule. Not here."
+        },
+        {
+          "h": "This is where the private site ends",
+          "p": "From the 13th forward the caravan schedule takes over and the public site carries it — 31 days, nine stops, Winnipeg to Churchill and back."
+        }
+      ],
+      "short": "Winnipeg",
+      "label_dir": "right"
+    }
+  ]
+}

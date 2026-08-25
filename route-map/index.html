@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="referrer" content="no-referrer" />
+<title>Route Map — The Road to Winnipeg</title>
+<link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body>
+<div class="privacy"><b>Private</b> &nbsp;&middot;&nbsp; unlisted companion to the caravan &mdash; not linked from the public site, not indexed</div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<header class="site-hero">
+  <div class="aurora-band" aria-hidden="true"></div>
+  <div class="wrap site-hero-inner">
+    <a class="home-link" href="../index.html">&larr; Road to Winnipeg</a>
+    <h1>Route Map</h1>
+    <p class="sub">Xenia to the Winnipeg rendezvous, drawn straight from the trip file. Progress advances by date on its own.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="trip-status" class="trip-status">Loading trip progress&hellip;</div>
+  <div id="map" class="route-map"></div>
+  <div class="map-legend">
+    <span><i class="lg road-t"></i> Traveled</span>
+    <span><i class="lg road-u"></i> Still to come</span>
+    <span><i class="lg cur"></i> Parked here now</span>
+    <span><i class="lg fin"></i> Rendezvous</span>
+  </div>
+  <p class="map-note">Straight lines between stops, not the driving route &mdash; the turn-by-turn lives in the
+    trip file. Tap any stop for dates and campground. The line crosses into Canada at Pembina&ndash;Emerson
+    on the last leg.</p>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var TRIP=[{"n":1,"name":"Sauder Village Campground","town":"Archbold","arrive":"2026-08-13","depart":"2026-08-16","lat":41.54048,"lon":-84.30134},{"n":2,"name":"Camp Grayling Trailer Park","town":"Grayling","arrive":"2026-08-16","depart":"2026-08-17","lat":44.63467,"lon":-84.77206},{"n":3,"name":"Au Train Lake Campground","town":"Au Train","arrive":"2026-08-17","depart":"2026-08-18","lat":46.3917,"lon":-86.8383},{"n":4,"name":"Wild State Cider","town":"Duluth","arrive":"2026-08-18","depart":"2026-08-19","lat":46.76286,"lon":-92.1302},{"n":5,"name":"Minnesota Airstream Park","town":"Clear Lake","arrive":"2026-08-19","depart":"2026-08-21","lat":45.45092,"lon":-93.9785},{"n":6,"name":"Jamestown Campground","town":"Jamestown","arrive":"2026-08-21","depart":"2026-08-22","lat":46.89123,"lon":-98.77689},{"n":7,"name":"North Dakota State Fairgrounds","town":"Minot","arrive":"2026-08-22","depart":"2026-08-28","lat":48.22936,"lon":-101.25601},{"n":8,"name":"Juniper Campground","town":"TR North","arrive":"2026-08-28","depart":"2026-08-30","lat":47.59524,"lon":-103.33324},{"n":9,"name":"Cottonwood Campground","town":"TR South","arrive":"2026-08-30","depart":"2026-09-01","lat":46.94846,"lon":-103.52811},{"n":10,"name":"Lake Sakakawea State Park","town":"Pick City","arrive":"2026-09-01","depart":"2026-09-03","lat":47.51959,"lon":-101.45399},{"n":11,"name":"Lake Metigoshe State Park","town":"Bottineau","arrive":"2026-09-03","depart":"2026-09-10","lat":48.98318,"lon":-100.33425},{"n":12,"name":"Icelandic State Park","town":"Cavalier","arrive":"2026-09-10","depart":"2026-09-12","lat":48.77263,"lon":-97.73952},{"n":13,"name":"Town &amp; Country Campground","town":"Winnipeg","arrive":"2026-09-12","depart":"2026-09-15","lat":49.82708,"lon":-96.97868}];
+var TRIP_START="2026-08-13",TRIP_END="2026-09-12";
+
+function tripDay(s){return new Date(s+"T12:00:00");}
+function tripToday(){var n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,0);}
+function tripState(){
+  var t=tripToday(),start=tripDay(TRIP_START),end=tripDay(TRIP_END),MS=86400000;
+  var cur=-1;
+  for(var i=0;i<TRIP.length;i++){ if(tripDay(TRIP[i].arrive)<=t) cur=i; }
+  var total=Math.round((end-start)/MS)+1;
+  if(t<start) return {phase:"before",days:Math.round((start-t)/MS),total:total};
+  if(t>end)   return {phase:"after",total:total};
+  return {phase:"on",idx:cur,stop:TRIP[cur],day:Math.floor((t-start)/MS)+1,total:total};
+}
+function tripBanner(el){
+  if(!el) return; var s=tripState();
+  if(s.phase==="before"){
+    el.innerHTML='<span class="tag-live soon"></span> Rolls out of Xenia in <b>'+s.days+
+      ' day'+(s.days===1?'':'s')+'</b><span class="where">'+s.total+' days and 2,348 miles to the Winnipeg rendezvous</span>';
+  } else if(s.phase==="after"){
+    el.innerHTML='<span class="tag-live done"></span> <b>Arrived Winnipeg</b>'+
+      '<span class="where">The caravan has the schedule from here</span>';
+  } else {
+    var leaving=tripDay(s.stop.depart), t=tripToday(), MS=86400000;
+    var out=Math.round((leaving-t)/MS);
+    var tail = out<=0 ? 'moving on today' : (out===1?'rolling on tomorrow':'here '+out+' more nights');
+    el.innerHTML='<span class="tag-live on"></span> <b>Day '+s.day+' of '+s.total+'</b> &middot; parked at <b>'+
+      s.stop.town+'</b><span class="where">Stop '+s.stop.n+' of 13 &middot; '+
+      s.stop.name+' &middot; '+tail+'</span>';
+  }
+}
+
+var PTS=[{"name":"Xenia","lat":39.67767,"lon":-84.02572,"dates":"Departs Thu Aug 13","camp":"Home","note":"Where the whole thing starts","kind":"origin","arrive":"2026-08-13","dir":"bottom"},{"name":"Archbold","lat":41.54048,"lon":-84.30134,"dates":"Aug 13\u201316","camp":"Sauder Village Campground","note":"The shakedown leg","kind":"","dir":"right","arrive":"2026-08-13"},{"name":"Grayling","lat":44.63467,"lon":-84.77206,"dates":"Aug 16\u201317","camp":"Camp Grayling Trailer Park","note":"It is a military installation","kind":"","dir":"right","arrive":"2026-08-16"},{"name":"Au Train","lat":46.3917,"lon":-86.8383,"dates":"Aug 17\u201318","camp":"Au Train Lake Campground","note":"First battery night","kind":"","dir":"right","arrive":"2026-08-17"},{"name":"Duluth","lat":46.76286,"lon":-92.1302,"dates":"Aug 18\u201319","camp":"Wild State Cider","note":"A parking lot, not a campground","kind":"","dir":"right","arrive":"2026-08-18"},{"name":"Clear Lake","lat":45.45092,"lon":-93.9785,"dates":"Aug 19\u201321","camp":"Minnesota Airstream Park","note":"Recovery stop","kind":"","dir":"left","arrive":"2026-08-19"},{"name":"Jamestown","lat":46.89123,"lon":-98.77689,"dates":"Aug 21\u201322","camp":"Jamestown Campground","note":"Positioning night","kind":"","dir":"right","arrive":"2026-08-21"},{"name":"Minot","lat":48.22936,"lon":-101.25601,"dates":"Aug 22\u201328","camp":"North Dakota State Fairgrounds","note":"The 69th Airstream Club International Rally","kind":"big","dir":"right","arrive":"2026-08-22"},{"name":"TR North","lat":47.59524,"lon":-103.33324,"dates":"Aug 28\u201330","camp":"Juniper Campground","note":"No hookups \u2014 but water and a dump station","kind":"","dir":"left","arrive":"2026-08-28"},{"name":"TR South","lat":46.94846,"lon":-103.52811,"dates":"Aug 30 \u2013 Sep 1","camp":"Cottonwood Campground","note":"No hookups and no dump station","kind":"","dir":"left","arrive":"2026-08-30"},{"name":"Pick City","lat":47.51959,"lon":-101.45399,"dates":"Sep 1\u20133","camp":"Lake Sakakawea State Park","note":"First shore power in five days","kind":"","dir":"bottom","arrive":"2026-09-01"},{"name":"Bottineau","lat":48.98318,"lon":-100.33425,"dates":"Sep 3\u201310","camp":"Lake Metigoshe State Park","note":"Seven nights \u2014 the longest stop before the caravan","kind":"big","dir":"top","arrive":"2026-09-03"},{"name":"Cavalier","lat":48.77263,"lon":-97.73952,"dates":"Sep 10\u201312","camp":"Icelandic State Park","note":"The last American night","kind":"","dir":"right","arrive":"2026-09-10"},{"name":"Winnipeg","lat":49.82708,"lon":-96.97868,"dates":"Sep 12\u201315","camp":"Town &amp; Country Campground","note":"The crossing","kind":"arrival","dir":"right","arrive":"2026-09-12"}];
+tripBanner(document.getElementById('trip-status'));
+(function(){
+  var t=tripToday();
+  var map=L.map('map',{scrollWheelZoom:false});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+    {attribution:'&copy; OpenStreetMap contributors &copy; CARTO',subdomains:'abcd',maxZoom:11,minZoom:3}).addTo(map);
+  map.fitBounds(PTS.map(function(p){return [p.lat,p.lon];}),{padding:[36,36]});
+
+  var cur=-1;
+  for(var i=0;i<PTS.length;i++){ if(tripDay(PTS[i].arrive)<=t) cur=i; }
+
+  for(var j=0;j<PTS.length-1;j++){
+    var a=PTS[j],b=PTS[j+1],traveled=(j+1)<=cur;
+    L.polyline([[a.lat,a.lon],[b.lat,b.lon]],
+      traveled ? {color:'#9c5f12',weight:4,opacity:.95}
+               : {color:'#5b6b7d',weight:3,opacity:.65,dashArray:'6,8'}).addTo(map);
+  }
+
+  PTS.forEach(function(p,i){
+    var arrival=p.kind==='arrival', big=p.kind==='big', origin=p.kind==='origin';
+    var color=arrival?'#1c8a64':(big?'#d98a2b':(origin?'#6c7787':'#34618f'));
+    var m=L.circleMarker([p.lat,p.lon],
+      {radius:arrival?9:(big?8:6),color:'#fff',weight:2,fillColor:color,fillOpacity:1}).addTo(map);
+    m.bindPopup('<div class="pop"><b>'+p.name+'</b>'+(arrival?' &#9733;':'')+
+      '<br><span class="pd">'+p.dates+'</span><br>'+p.camp+
+      '<br><span class="pn">'+p.note+'</span></div>');
+    var off={right:[9,0],left:[-9,0],top:[0,-8],bottom:[0,8]}[p.dir]||[9,0];
+    m.bindTooltip(p.name,{permanent:true,direction:p.dir,className:'stoplbl',offset:off});
+  });
+
+  var st=tripState();
+  if(st.phase==='on'&&cur>=0){
+    var c=PTS[cur];
+    var ic=L.divIcon({className:'',html:'<div class="pulse"></div>',iconSize:[16,16],iconAnchor:[8,8]});
+    L.marker([c.lat,c.lon],{icon:ic,zIndexOffset:1000}).addTo(map)
+      .bindPopup('<div class="pop"><b>We are here</b><br><span class="pn">'+c.camp+'</span></div>');
+  }
+})();
+</script>
+<footer class="site-foot">
+  <div class="wrap">
+    <p><b>The Road to Winnipeg</b> &middot; <a href="../index.html">Overview</a> &middot;
+       <a href="../itinerary/">Itinerary</a> &middot; <a href="../route-map/">Route map</a>
+       &middot; <span style="color:var(--stone)">built August 25, 2026</span></p>
+    <p class="fine">Private trip log for the run up to the 2026 Northern Lights &amp; Polar Bears rendezvous.
+      Personal document by SN Thorsen &mdash; not affiliated with or representing Airstream Club International
+      or any other club or organization. Unlisted by choice; share the link or don't.</p>
+  </div>
+</footer>
+</body>
+</html>
